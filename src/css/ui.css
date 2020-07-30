@@ -12,10 +12,17 @@
   filter: blur(2px);
 }
 
+.goButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .questionOutput {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .question {
@@ -24,20 +31,39 @@
 }
 
 .textInput {
-  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--mainColour);
   font-size: 2rem;
   margin-bottom: 2rem;
+  padding: 10px;
 }
 
 input {
+  color: var(--mainColour);
   font-size: 1.5rem;
   outline: none;
+  border: none;
   padding: 0.3rem;
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.781);
+  box-shadow: inset 2px 2px 2px var(--mainColour);
+  background-color: var(--mainColourAccent);
 }
 
 button {
+  color: var(--mainColour);
   padding: 0.5rem;
+  border: 3px solid var(--mainColour);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+button:active {
+  background-color: #666;
 }
 
 .messageContainer {
@@ -50,7 +76,7 @@ button {
   width: 100vw;
   height: 100vh;
   z-index: 1024;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.554);
   /* transition: all 0.1s ease-in-out; */
 }
 
