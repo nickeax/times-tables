@@ -4,7 +4,7 @@
   --mainLight: 40%;
   --mainAlpha: 1.0;
 
-  --backgroundColour: hsla(var(--mainHue), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
+  --backgroundColour: hsla(var(--mainHue), calc(var(--mainSaturation) - 40%), calc(var(--mainLight) + 30%), var(--mainAlpha));
   --mainCompColour: #eee;
   --mainColour: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
   --mainColourAccent: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), calc(var(--mainLight) + 20%), calc(var(--mainAlpha) - 0.5));

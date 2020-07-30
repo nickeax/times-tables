@@ -4,7 +4,7 @@ import { Utilities } from './Utilities.js'
 const num = new Number()
 const util = new Utilities()
 
-const errorTimeout = 1300
+const errorTimeout = 1000
 
 let gameArr = []
 
@@ -20,6 +20,9 @@ const upper = document.querySelector('#upper')
 const mainScreen = document.querySelector('#mainScreen')
 const messageContainer = document.querySelector('#messageContainer')
 const errorMessage = document.querySelector('#errorMessage')
+
+
+factor.focus()
 
 let correctAnswer = 0; 
 
@@ -38,6 +41,7 @@ document.addEventListener('click', ev => {
         questionA.innerHTML = `${factor.value} X `
         questionB.innerHTML = ` = ${tmp}`
         correctAnswer = tmp / factor.value
+        answer.focus()
       }
       break
     case 'btnAnswer':
@@ -49,6 +53,7 @@ document.addEventListener('click', ev => {
         questionB.innerHTML = ""
         answer.value = ""
         btnBegin.click()
+        answer.focus()
       } else {
         error("Sorry, please try again!")
       }

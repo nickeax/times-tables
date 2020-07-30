@@ -49,6 +49,7 @@ input {
   padding: 0.3rem;
   box-shadow: inset 2px 2px 2px var(--mainColour);
   background-color: var(--mainColourAccent);
+  border-radius: 1rem;
 }
 
 button {
