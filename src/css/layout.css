@@ -1,6 +1,6 @@
 .container {
-  height: 90vh;
   display: flex;
+  height: 90vh;
   align-items: center;
   justify-content: center;
   width: 50%;
@@ -9,6 +9,7 @@
   background-color: var(--mainCompColour);
   color: var(--mainColour);
   border: 2px dotted var(--mainColour);
+  z-index: -666;
 }
 
 header.container {

@@ -11,33 +11,41 @@
   <header class="container">
     <h2>Magical Times Table Trainer</h2>
   </header>
-  <div class="container">
+  <div id="mainScreen" class="container">
     <form action="#">
       <!-- INPUT FOR FACTOR -->
-      <label for="factor">
-        <input type="text" id="factor" autocomplete="off" placeholder="times table">
-      </label>
-      <!-- INPUT FOR UPPER BOUND -->
-      <label for="upper">
-        <input type="text" id="upper" autocomplete="off" placeholder="upper bound">
-      </label>
+      <div class="textInput">
+        <label for="factor">factor<br>
+          <input type="text" id="factor" autocomplete="off" placeholder="times table">
+        </label>
+      </div>
+      <div class="textInput">
+        <!-- INPUT FOR UPPER BOUND -->
+        <label for="upper">highest<br>
+          <input type="text" id="upper" autocomplete="off" placeholder="upper bound">
+        </label>
+      </div>
       <!-- BEGIN GAME -->
       <label for="btnBegin">
-        <button id="btnBegin">START</button>
+        <button id="btnBegin">GO!</button>
       </label>
+      
       <!-- QUESTION OUTPUT -->
-      <div class="question" id="question"></div>
-      <!-- INPUT FOR ANSWER -->
-      <label for="answer">
-        <input type="text" id="answer">
-      </label>
-      <!-- BUTTON TO CHECK ANSWER -->
-      <button id="btnAnswer">ANSWER</button>
+      <div class="questionOutput">
+        <span class="question" id="questionA"></span>
+        <!-- INPUT FOR ANSWER -->
+        <label for="answer">
+          <input type="text" id="answer">
+        </label>
+        <span class="question" id="questionB"></span>
+        <!-- BUTTON TO CHECK ANSWER -->
+        <button type="submit" id="btnAnswer">ANSWER</button>
+      </div>
     </form>
-    <div id="messageContainer" class="messageContainer hide">
-      <div id="errorMessage" class="errorMessage"></div>
-      <div id="infoMessage" class="infoMessage"></div>
-    </div>
+  </div>
+  <div id="messageContainer" class="messageContainer hide">
+    <div id="errorMessage" class="errorMessage"></div>
+    <div id="infoMessage" class="infoMessage"></div>
   </div>
 </body>
 </html>

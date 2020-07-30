@@ -1,10 +1,11 @@
 :root {
-  --mainHue: 0;
-  --mainSaturation: 60%;
-  --mainLight: 60%;
+  --mainHue: 120;
+  --mainSaturation: 80%;
+  --mainLight: 30%;
+  --mainAlpha: 1.0;
 
-  --mainColour: hsla(var(--mainHue), var(--mainSaturation), var(--mainLight));
-  --mainCompColour: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), var(--mainLight))
+  --mainCompColour: hsla(var(--mainHue), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
+  --mainColour: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
 
   /* PADDING/MARGIN */
   --small: 0.5rem;
