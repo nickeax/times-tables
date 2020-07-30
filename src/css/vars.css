@@ -1,0 +1,14 @@
+:root {
+  --mainHue: 0;
+  --mainSaturation: 60%;
+  --mainLight: 60%;
+
+  --mainColour: hsla(var(--mainHue), var(--mainSaturation), var(--mainLight));
+  --mainCompColour: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), var(--mainLight))
+
+  /* PADDING/MARGIN */
+  --small: 0.5rem;
+  --normal: 1.0rem;
+  --medium: 1.5rem;
+  --large: 2.5rem;
+}

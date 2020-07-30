@@ -1,0 +1,23 @@
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.messageContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1024;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.errorMessage {
+  align-self: flex-end;
+  padding: var(--medium);
+}
