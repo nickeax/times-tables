@@ -1,13 +1,17 @@
 :root {
-  --mainHue: 320;
-  --mainSaturation: 80%;
-  --mainLight: 40%;
+  --mainHue: 10;
+  --mainSaturation: 100%;
+  --mainLight: 50%;
   --mainAlpha: 1.0;
 
-  --backgroundColour: hsla(var(--mainHue), calc(var(--mainSaturation) - 40%), calc(var(--mainLight) + 30%), var(--mainAlpha));
+  --backgroundColour: hsla(var(--mainHue), calc(var(--mainSaturation) - 25%), calc(var(--mainLight) + 0%), var(--mainAlpha));
   --mainCompColour: #eee;
   --mainColour: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
   --mainColourAccent: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), calc(var(--mainLight) + 20%), calc(var(--mainAlpha) - 0.5));
+
+/* HEADERS/CONTAINER */
+--containerBorderThickness: 25px;
+--containerBorderThickness2: 15px;
 
   /* PADDING/MARGIN */
   --small: 0.5rem;

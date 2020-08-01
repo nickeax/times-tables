@@ -9,10 +9,11 @@
 </head>
 <body>
   <header class="container">
-    <h2>Magical Times Table Trainer</h2>
+    <h2>Magical Times Tables Trainer</h2>
   </header>
   <div id="mainScreen" class="container">
-    <form action="#">
+    <form>
+      <div class="statsBar" id="statsBar"></div>
       <!-- INPUT FOR FACTOR -->
       <div class="textInput">
         <label for="factor">factor
@@ -28,7 +29,7 @@
       <!-- BEGIN GAME -->
       <div class="goButton">
         <label for="btnBegin">
-          <button id="btnBegin">TRY THIS TIMES TABLE!</button>
+          <button id="btnBegin">PLAY!</button>
         </label>
       </div>
       
@@ -37,11 +38,11 @@
         <span class="question" id="questionA"></span>
         <!-- INPUT FOR ANSWER -->
         <label for="answer">
-          <input type="text" id="answer">
+          <input type="text" id="answer" autocomplete="off">
         </label>
         <span class="question" id="questionB"></span>
         <!-- BUTTON TO CHECK ANSWER -->
-        <button type="submit" id="btnAnswer">ANSWER</button>
+        <button type="submit" id="btnAnswer" disabled>ANSWER</button>
       </div>
     </form>
   </div>

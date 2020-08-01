@@ -18,6 +18,17 @@
   justify-content: center;
 }
 
+.statsBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+ul li {
+  list-style: none;
+}
+
 .questionOutput {
   display: flex;
   align-items: center;
@@ -88,3 +99,60 @@ button:active {
   padding: var(--medium);
 }
 
+@media only screen and (max-width: 1200px) {
+  .question {
+    padding: 2px;
+    font-size: 1rem;
+  }
+  
+  .textInput {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    padding: 2px;
+  }
+  
+  input {
+    font-size: 1.0rem;
+    padding: 2px;
+    border-radius: 0.3rem;
+  }
+  
+  button {
+    padding: 2px;
+    border: 1px solid var(--mainColour);
+  }
+  
+  .messageContainer {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1024;
+    background-color: rgba(0, 0, 0, 0.554);
+    /* transition: all 0.1s ease-in-out; */
+  }
+
+  .statsBar {
+    display: flex;
+    padding: 0.5rem;
+    color: red;
+    background-color: var(--mainColour);
+  }
+
+  .statsBar h2 {
+    color: white;
+  }
+  
+  .errorMessage {
+    color: var(--mainColour);
+    background-color: var(--mainCompColour);
+    border: 5px solid var(--mainColour);
+    font-size: 2rem;
+    padding: var(--medium);
+    border-radius: 3rem;
+  }
+}

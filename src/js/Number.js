@@ -11,7 +11,7 @@ export class Number {
     }
 
     // METHODS
-    display(parent, deubug=0) {
+    display(parent, debug=0) {
         // Maybe have a 'debug' flag that has levels for the amount extra data to show?
     }
 
@@ -57,16 +57,4 @@ export class Number {
         }
         this.prime = flag
     }
-
-    buildTables(fact, upperLim) {
-        let tbl = []
-        for(let i = 1; i <= upperLim; i++) {
-            if(i * fact > upperLim) break
-            tbl.push(i * fact)
-        }
-
-        return tbl
-    }
-
-
 }
