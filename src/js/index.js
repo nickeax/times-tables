@@ -2,12 +2,15 @@ import { Problems } from './Problems.js'
 import { Number } from './Number.js'
 import { Utilities } from './Utilities.js'
 
+const numerals = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
 const num = new Number()
 const util = new Utilities()
 
 const elements = document.querySelectorAll('input')
 
 const btnBegin = document.querySelector('#btnBegin')
+const btnReset = document.querySelector('#btnReset')
 const statsBar = document.querySelector('#statsBar')
 const answer = document.querySelector('#answer')
 const questionA = document.querySelector('#questionA')
@@ -21,6 +24,42 @@ let probs = {}
 
 factor.focus()
 
+document.addEventListener('keydown', ev => {
+  // ev.preventDefault()
+  if(ev.keyCode === 13) return false
+  return true
+})
+
+// document.addEventListener('submit', ev) {
+//   ev.preventDefault()
+//   return
+// }
+
+btnReset.addEventListener('click', ev => {
+  location.reload()
+})
+
+document.addEventListener('keyup', ev => {
+  console.log(ev.keyCode);
+  //48 - 57
+  isAllowed(ev.target.id)
+})
+
+function isAllowed(id) {
+  if(id === 'factor') {
+    let tmp = factor.value.split('')
+    factor.value = tmp.filter(x => {
+      return x >= 0 || x <= 9 
+    }).join('')
+  } else {
+    let tmp = upper.value.split('')
+    upper.value = tmp.filter(x => {
+      return x >= 0 || x <= 9 
+    }).join('')
+    console.log('Checking upper');
+  }
+}
+
 messageContainer.classList.add('hide')
 
 document.addEventListener('click', ev => {
@@ -30,12 +69,16 @@ document.addEventListener('click', ev => {
     case 'btnBegin':
       if (!factor.value || !upper.value) {
         error('Please enter all items')
+        
         break
       } else {
+        if(parseInt(factor.value) > parseInt(upper.value)) {
+          error("The factor number must be less than the upper bound number")
+        }
         statsBar.innerHTML = ""
         probs = new Problems(factor.value, upper.value)
         btnAnswer.disabled = false
-        
+        btnBegin.classList.add('hide')
         probs.playNext()
       }
       break
@@ -62,4 +105,5 @@ function clearErrorMessage() {
   messageContainer.classList.add('hide')
   errorMessage.classList.remove('show')
   errorMessage.classList.add('hide')
+  location.reload()
 }

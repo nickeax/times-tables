@@ -1,7 +1,7 @@
 :root {
-  --mainHue: 10;
+  --mainHue: 170;
   --mainSaturation: 100%;
-  --mainLight: 50%;
+  --mainLight: 40%;
   --mainAlpha: 1.0;
 
   --backgroundColour: hsla(var(--mainHue), calc(var(--mainSaturation) - 25%), calc(var(--mainLight) + 0%), var(--mainAlpha));

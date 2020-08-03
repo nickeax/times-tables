@@ -10,7 +10,7 @@
   color: var(--mainColour);
   z-index: -666;
   
-  border-radius: 15rem;
+  border-radius: 10rem;
   border-left: var(--containerBorderThickness) solid var(--mainColour);
   border-bottom: var(--containerBorderThickness) solid var(--mainColour);
   border-right: var(--containerBorderThickness) solid var(--mainColour);
@@ -30,6 +30,18 @@ header.container {
   border-left: var(--containerBorderThickness) solid var(--mainColour);
   border-top: var(--containerBorderThickness) solid var(--mainColour);
   border-right: var(--containerBorderThickness) solid var(--mainColour);
+}
+
+header.container, .container {
+  box-shadow: 0 0 0px 6px rgb(155, 0, 245), 
+  0 0 0px 10px rgb(245, 139, 0), 
+  0 0 0 2px inset rgba(0, 0, 0, 0.493),
+  0 0 0 4px inset rgba(0, 0, 0, 0.293);
+}
+
+.specialT {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--mainColour);
 }
 
 @media only screen and (max-width: 1200px) {

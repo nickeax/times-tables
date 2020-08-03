@@ -43,14 +43,20 @@ export class Problems {
 
   report() {
     console.log('report()');
-    let tmp = ""
-    tmp = '<div><h3>These are the ones you missed</h3></div><ul>'
-    this.incorrect.forEach(x => {
-      tmp += `<li>${factor.value} X ${x.value / factor.value} = ${x.value}</li>`
-    })
-    tmp += '</ul><tt>enter some new numbers and hit PLAY to play again!</tt>'
+    if(this.incorrect.length > 0) {
 
-    statsBar.innerHTML = tmp
+      let tmp = ""
+      tmp = '<div><h3>These are the ones you missed</h3></div><ul>'
+      this.incorrect.forEach(x => {
+        tmp += `<li>${factor.value} X ${x.value / factor.value} = ${x.value}</li>`
+      })
+      tmp += '</ul><tt>enter some new numbers and hit PLAY to play again!</tt>'
+  
+      statsBar.innerHTML = tmp
+    } else {
+      statsBar.innerHTML = "<h2 class='green'>ALL CORRECT!</h2><tt>enter some new numbers and hit PLAY to play again!</tt>"
+    }
+    btnBegin.classList.remove('hide')
     this.init()
   }
 
@@ -80,17 +86,11 @@ export class Problems {
   }
 
   playNext() {
+    answer.focus()
     answer.classList.remove('hide')
-    // answer.classList.add('show')
-
     this.btnAnswer.classList.remove('hide')
-    // this.btnAnswer.classList.add('show')
-
     questionA.classList.remove('hide')
-    // questionA.classList.add('hide')
-
     questionB.classList.remove('hide')
-    // questionB.classList.add('show')
 
     this.ind = u.randomNumber(this.problems.length)
     questionA.innerHTML = `${factor.value} X `

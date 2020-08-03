@@ -9,27 +9,31 @@
 </head>
 <body>
   <header class="container">
-    <h2>Magical Times Tables Trainer</h2>
+    <h2><span class="specialT">T</span>imes <span class="specialT">T</span>ables <span class="specialT">T</span>rainer</h2>
   </header>
   <div id="mainScreen" class="container">
     <form>
+      <button type="submit" disabled style="display: none" aria-hidden="true"></button>
       <div class="statsBar" id="statsBar"></div>
       <!-- INPUT FOR FACTOR -->
       <div class="textInput">
         <label for="factor">factor
-          <input type="text" id="factor" autocomplete="off" placeholder="times table">
+          <input type="text" id="factor" autocomplete="off" placeholder="numerals 0 - 9">
         </label>&nbsp&nbsp&nbsp
       <!-- </div>
       <div class="textInput"> -->
         <!-- INPUT FOR UPPER BOUND -->
-        <label for="upper">highest
-          <input type="text" id="upper" autocomplete="off" placeholder="upper bound">
+        <label for="upper">highest result
+          <input type="text" id="upper" autocomplete="off" placeholder="numerals 0 - 9">
         </label>
       </div>
       <!-- BEGIN GAME -->
       <div class="goButton">
         <label for="btnBegin">
           <button id="btnBegin">PLAY!</button>
+        </label>
+        <label for="btnReset">
+          <span class="btn btn-reset" id="btnReset">RESET<span>
         </label>
       </div>
       
@@ -38,12 +42,13 @@
         <span class="question" id="questionA"></span>
         <!-- INPUT FOR ANSWER -->
         <label for="answer">
-          <input type="text" id="answer" autocomplete="off">
+          <input type="text" id="answer" class="hide" autocomplete="off">
         </label>
         <span class="question" id="questionB"></span>
         <!-- BUTTON TO CHECK ANSWER -->
-        <button type="submit" id="btnAnswer" disabled>ANSWER</button>
+        <button id="btnAnswer" class="hide" disabled>ANSWER</button>
       </div>
+      
     </form>
   </div>
   <div id="messageContainer" class="messageContainer hide">

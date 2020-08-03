@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.green {
+  color: lime;
+}
+
 .obscure {
   opacity: 0.5;
   filter: blur(2px);
@@ -52,6 +56,19 @@ ul li {
   padding: 10px;
 }
 
+.btn {
+  margin-left: 1.5rem;
+  padding: 0.35rem;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.btn-reset {
+  color: rgb(197, 118, 13);
+  border-color: rgb(197, 118, 13);;
+  background-color: rgba(255, 255, 0, 0);
+}
+
 input {
   color: var(--mainColour);
   font-size: 1.5rem;
@@ -61,6 +78,13 @@ input {
   box-shadow: inset 2px 2px 2px var(--mainColour);
   background-color: var(--mainColourAccent);
   border-radius: 1rem;
+  caret-color: linen;
+}
+
+input:focus {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.911);
+  border: 1px solid var(--backgroundColour);
 }
 
 button {
@@ -69,7 +93,7 @@ button {
   border: 3px solid var(--mainColour);
 }
 
-button:hover {
+button:hover, .btn:hover{
   cursor: pointer;
   background-color: #fff;
 }
