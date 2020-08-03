@@ -4,55 +4,66 @@
   align-items: center;
   justify-content: center;
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
   padding: 1rem;
-  background-color: var(--mainCompColour);
+  background-color: var(--light);
   color: var(--mainColour);
   z-index: -666;
   
-  border-radius: 10rem;
+  border-radius: 50%;
   border-left: var(--containerBorderThickness) solid var(--mainColour);
   border-bottom: var(--containerBorderThickness) solid var(--mainColour);
   border-right: var(--containerBorderThickness) solid var(--mainColour);
-  box-shadow: 0 0 1px 4px var(--mainCompColour);
+  box-shadow: 0 0 1px 4px var(--mainCompColour),
+    0 0 0 2px inset rgba(0, 0, 0, 0.239),
+    0 0 0 4px inset rgba(0, 0, 0, 0.293);
 }
 
 header.container {
-  margin-top: 1rem;
-  /* margin-bottom: 1rem; */
-  font-size: 3rem;
-  height: 26vh;
-  color: var(--mainCompColour);
-  background-color: rgba(255, 255, 255, 0);
-  text-shadow: 0 0 3px var(--mainColour);
-
+  text-align: center;
+  font-size: 2.5rem;
+  height: 30vh;
+  width: 17%;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+  transform: translate(-25rem, 9rem) rotate(-10deg);
+  color: var(--mainColour);
+  background-color: var(--light);
+  /* border-radius: 50%; */
   border-bottom: none;
-  border-left: var(--containerBorderThickness) solid var(--mainColour);
-  border-top: var(--containerBorderThickness) solid var(--mainColour);
-  border-right: var(--containerBorderThickness) solid var(--mainColour);
+  box-shadow: none;
+  /* border-left: var(--containerBorderThickness) solid var(--mainColour); */
+  /* border-top: var(--containerBorderThickness) solid var(--mainColour); */
+  /* border-right: var(--containerBorderThickness) solid var(--mainColour); */
 }
 
 header.container, .container {
-  box-shadow: 0 0 0px 6px rgb(155, 0, 245), 
-  0 0 0px 10px rgb(245, 139, 0), 
-  0 0 0 2px inset rgba(0, 0, 0, 0.493),
-  0 0 0 4px inset rgba(0, 0, 0, 0.293);
+  /* box-shadow: 0 0 0px 5px rgb(155, 0, 245), 
+  0 0 0px 10px rgb(245, 139, 0);   */
 }
 
 .specialT {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--mainColour);
+  color: var(--mainColourAccent);
+}
+
+@media only screen and (max-width: 1350px) {
+  header.container {
+    font-size: 1.7rem;
+    transform: translate(-25rem, 7rem) rotate(-10deg);
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .container {
     width: 100%;
     border: 1px solid var(--mainColour);
+    border-radius: 1rem;
   }
 
   header.container {
     margin: 0;
     font-size: 1rem;
+    
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -62,6 +73,7 @@ header.container, .container {
   }
 
   header.container {
+    transform: translate(-25rem, 10rem) rotate(-10deg);
     margin: 1rem;
     font-size: 1rem;
   }

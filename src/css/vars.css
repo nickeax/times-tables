@@ -1,11 +1,11 @@
 :root {
-  --mainHue: 170;
+  --mainHue: 180;
   --mainSaturation: 100%;
-  --mainLight: 40%;
+  --mainLight: 50%;
   --mainAlpha: 1.0;
-
-  --backgroundColour: hsla(var(--mainHue), calc(var(--mainSaturation) - 25%), calc(var(--mainLight) + 0%), var(--mainAlpha));
-  --mainCompColour: #eee;
+  --light: rgba(230, 230, 230, 1.0);
+  --backgroundColour: hsla(var(--mainHue), calc(var(--mainSaturation) - 15%), calc(var(--mainLight) + 20%), var(--mainAlpha));
+  --mainCompColour: hsla(var(--mainHue), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
   --mainColour: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), var(--mainLight), var(--mainAlpha));
   --mainColourAccent: hsla(calc(var(--mainHue) - 180), var(--mainSaturation), calc(var(--mainLight) + 20%), calc(var(--mainAlpha) - 0.5));
 
@@ -18,4 +18,6 @@
   --normal: 1.0rem;
   --medium: 1.5rem;
   --large: 2.5rem;
+
+  transition: all 1s ease-in-out;
 }

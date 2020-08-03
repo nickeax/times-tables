@@ -51,7 +51,7 @@ ul li {
   align-items: center;
   justify-content: space-evenly;
   color: var(--mainColour);
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
   padding: 10px;
 }
@@ -70,21 +70,26 @@ ul li {
 }
 
 input {
-  color: var(--mainColour);
-  font-size: 1.5rem;
+  color: var(--mainCompColour);
+  font-size: 1.3rem;
+  width: 5rem;
   outline: none;
   border: none;
-  padding: 0.3rem;
+  padding: 0.6rem;
   box-shadow: inset 2px 2px 2px var(--mainColour);
-  background-color: var(--mainColourAccent);
+  background-color: var(--mainColour);
   border-radius: 1rem;
   caret-color: linen;
 }
 
 input:focus {
-  color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, 0.911);
-  border: 1px solid var(--backgroundColour);
+  /* color: rgb(0, 0, 0); */
+  /* background-color: rgba(255, 255, 255, 0.911); */
+  border: 1px solid var(--mainCompColour);
+}
+
+::placeholder {
+  color: #fff;
 }
 
 button {
@@ -163,8 +168,8 @@ button:active {
   .statsBar {
     display: flex;
     padding: 0.5rem;
-    color: red;
-    background-color: var(--mainColour);
+    /* color: red; */
+    /* background-color: var(--mainColour); */
   }
 
   .statsBar h2 {
